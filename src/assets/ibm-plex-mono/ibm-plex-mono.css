@@ -1,0 +1,8 @@
+/* ibm-plex-mono-regular */
+@font-face {
+	font-family: IBM Plex Mono;
+	font-style: normal;
+	font-weight: 400;
+	src: local("IBM Plex Mono Regular"), local("IBMPlexMono-Regular"), url(ibm-plex-mono-regular.woff2) format("woff2");
+}
+

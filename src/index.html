@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Simple Password Generator</title>
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ctext x='0' y='14'%3E🔏%3C/text%3E%3C/svg%3E%0A" />
+    <link href="css/index.css" rel="stylesheet">
+    <script src="js/index.js" type="module"></script>
+</head>
+
+<body>
+    <h1>Simple Password Generator</h1>
+    <textarea class="monospace" autocomplete="false" autofocus="true" rows="3" readonly="true" spellcheck="false"
+        wrap="hard"></textarea>
+    <form>
+        <div class="button_container">
+            <button type="button" id="generate">Regenerate</button>
+            <button type="button" id="copy_to_clipboard"><span class="tooltip hidden">Copied!</span>Copy to
+                Clipboard</button>
+        </div>
+        <div class="input_container">
+            <input type="range" class="generate_on_input" id="length" min="4" max="100" value="20" /><br>
+            <label for="length">Length: <span id="length_indicator">20</span></label><br>
+        </div>
+        <div class="input_container">
+            <input type="checkbox" class="generate_on_input" id="numbers" checked="true"></input><label>Numbers
+                (<span class="monospace">23456789</span>)</label><br>
+        </div>
+        <div class="input_container">
+            <input type="checkbox" class="generate_on_input" id="lower_case" checked="true"></input><label>Lower
+                case
+                letters (<span class="monospace">abcdefghijkmnopqrstuvwxyz</span>)</label><br>
+        </div>
+        <div class="input_container">
+            <input type="checkbox" class="generate_on_input" id="upper_case" checked="true"></input><label>Upper
+                case
+                letters (<span class="monospace">ABCDEFGHJKLMNPRSTUVWXYZ</span>)</label><br>
+        </div>
+        <div class="input_container">
+            <input type="checkbox" class="generate_on_input" id="special_characters"
+                checked="true"></input><label>Special
+                characters (<span class="monospace">!#%&+-=?@_</span>)</label><br>
+        </div>
+        <div class="input_container">
+            <input type="checkbox" class="generate_on_input" id="ambigous_characters"></input><label>Allow slightly
+                ambigous characters (<span class="monospace">01lIOQ\"$'*(),./:;=[\]^`{|}~</span>)</label><br>
+        </div>
+    </form>
+    <ul>
+        <li>Free and open source.</li>
+        <li>No network requests after page load. All genertion is on client side.</li>
+        <li>Selected character groups are included at least once.</li>
+        <li>No nonsense.</li>
+    </ul>
+</body>
+
+</html>
